@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Might be a site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #252525;
+            text-align: center;
+            color: aliceblue;
+            font-family: "Roboto Mono", monospace;
+        }
+        .btn {  font-family: Arial, Helvetica, sans-serif;  text-transform: uppercase;}  .btn:hover .btn-slide-show-text1 {  margin-left: 65px;}  .flash-slide {  border: none;  display: inline-block;  color: rgb(255, 255, 255);  margin: 20px;  width: 100px;  height: 40px;  border-radius: 10px;  position: relative;  overflow: hidden;  text-decoration: none;  text-transform: uppercase;  font-family: Helvetica;  text-align: center;}  .flash-slide::before {  content: "";  position: absolute;  top: -30px;  left: -80px;  height: 100px;  width: 70px;  background: rgba(255, 255, 255, 0.3);  transform: rotate(20deg);}  .flash-slide:hover::before {  left: 190px;  transition: 0.5s;}  .flash-slide--red {  background: rgb(240, 45, 68);}
+    </style>
 </head>
 <body>
     <form action="/" method="post">
         <h2>{{askIA}}</h2>
         <input type="text" name="question">
-        <button type="submit">Enter</button>
+        <button class="btn flash-slide flash-slide--red" type="submit"><span class="btn-shine-effect-span">Enter</span></button>
         <h2>Answer to the question is : {{answer}}</h2>
     </form>
 </body>
